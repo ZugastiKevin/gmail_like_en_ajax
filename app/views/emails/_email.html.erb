@@ -1,0 +1,4 @@
+<ul id="delete<%= email.id %>">
+  <td><%= Email.find(email.id).body %></td>
+  <td><%= link_to '✘', email, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+</ul>

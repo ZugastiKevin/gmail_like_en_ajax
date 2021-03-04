@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gmail Ajax</h1>
+
+
+<div class="container m-0 justify-content: space-between;">
+  <%= link_to 'recevoir un email', new_email_path, remote: true %>
+  <p></p>
+  <div class="row">
+    <div class="col">
+      <h2>Liste des emails</h2>
+      <% @emails.each do |email| %>
+        <div id="creating">
+          <ul id="delete<%= email.id %>">
+            <td><%= link_to email.object, email, remote: true %></td>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="col">
+      <h2>Email sélectionné</h2>
+        <div id="call">
+        </div>
+    </div>
+  </div>
+  <br>
+</div>
